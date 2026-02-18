@@ -82,19 +82,3 @@ The UI is tolerant to slightly different schemas, but the cleanest format is:
   "document_segments": [{ "type": "...", "pages": [1, 2] }]
 }
 ```
-
-## Notes
-
-- No backend required.
-- `normalizeClaim()` in `lib/claim.ts` adapts common field-name variations (camelCase vs snake_case) so nested JSON can be handled safely.
-- The PDF viewer uses the official `pdfjs-dist` worker from the `unpkg.com` CDN for maximum compatibility with Next.js + Turbopack.
-  - If you need a fully offline setup, copy `node_modules/pdfjs-dist/build/pdf.worker.min.mjs` into `public/` and set `pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'` in `components/PDFViewer.tsx`.
-
-## Video
-
-Record a short walkthrough (2–5 min) showing:
-
-1. Uploading a PDF + JSON
-2. Clicking page numbers (Bills / Audit Issues / Document Segments) to jump the PDF
-3. NME items highlighted in red
-
