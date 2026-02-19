@@ -17,10 +17,10 @@ A simple split-screen dashboard for medical claims review:
 
 ```bash
 # install
-pnpm install
+npm install
 
 # run
-pnpm dev
+npm run dev
 ```
 
 Then open `http://localhost:3000`.
